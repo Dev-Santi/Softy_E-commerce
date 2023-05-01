@@ -1,7 +1,17 @@
-import { Box } from "@chakra-ui/react";
+import "../../scss/components/_buttons.scss";
 
-const Button = ({ children }: { children: string }) => {
-  return <Box as='button'>{children}</Box>;
+const Button = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: JSX.Element | string;
+}) => {
+  return (
+    <button title='button' type='button' className={`btn ${className}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

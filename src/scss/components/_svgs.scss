@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.greenCircle {
+  position: absolute;
+  top: 0;
+  left: -1.2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: clr($backgrounds, aquamarine);
+}
