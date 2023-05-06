@@ -41,3 +41,19 @@ header {
 .relative {
   position: relative;
 }
+
+.navLinks {
+  display: block;
+  font-size: 1.8rem;
+  color: clr($texts, base);
+  font-weight: 500;
+}
+
+.navLinks {
+  margin-bottom: 1rem;
+}
+
+.navLinkAccordion {
+  transform: translate(-1rem);
+  padding-left: -1rem;
+}

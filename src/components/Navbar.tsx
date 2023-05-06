@@ -1,4 +1,9 @@
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   Button,
   Drawer,
@@ -8,6 +13,7 @@ import {
   DrawerOverlay,
   Flex,
   Image,
+  Link,
   Spacer,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -19,7 +25,7 @@ const Navbar = ({ isLoad }: { isLoad: boolean }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Flex as='nav' alignItems='center'>
+    <Flex as='nav' alignItems='center' marginBottom={"5rem"}>
       <Box w={["15rem", "20rem"]}>
         <Image objectFit='cover' src={Logo} alt='Softy Logo' />
       </Box>
@@ -39,11 +45,42 @@ const Navbar = ({ isLoad }: { isLoad: boolean }) => {
         <Drawer placement={"right"} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
+            <DrawerHeader borderBottomWidth='1px' fontSize='2.5rem'>
+              Menú
+            </DrawerHeader>
             <DrawerBody>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
+              <Accordion
+                borderBottom={"transparent"}
+                borderTop={"transparent"}
+                allowMultiple
+              >
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box className='navLinks navLinkAccordion'>Skin Care</Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    <Link
+                      className='navLinks'
+                      color={"gray.600"}
+                      fontSize={"1.4rem"}
+                    >
+                      Si
+                    </Link>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+              <Link className='navLinks' href='#'>
+                Products
+              </Link>
+              <Link className='navLinks' href='#'>
+                Testimonials
+              </Link>
+              <Link className='navLinks' href='#'>
+                About Us
+              </Link>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
