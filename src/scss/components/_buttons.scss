@@ -8,3 +8,17 @@
   background-color: transparent;
   width: fit-content;
 }
+
+.btnGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 4rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  background-color: clr($backgrounds, aquamarine);
+}

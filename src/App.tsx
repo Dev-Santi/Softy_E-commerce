@@ -16,7 +16,7 @@ function App() {
     <>
       <Box as='header' pt={5} className='sectionPadding'>
         <Navbar isLoad={true} />
-        <Heading margin='0 auto' as={"h1"} fontSize={["2.5rem", "5rem"]}>
+        <Heading width='fit-content' as='h1' fontSize='clamp(2rem, 10vw, 5rem)'>
           Natural 🍃
           <br />
           Ingredients for
