@@ -32,12 +32,7 @@ const Navbar = ({ isLoad }: { isLoad: boolean }) => {
       <Spacer></Spacer>
       <Flex align='center' flexDirection={"row-reverse"}>
         <Box className='relative'>
-          <Button
-            _hover={{ transform: "scale(1.2)" }}
-            colorScheme='transparent'
-            color='black'
-            onClick={onOpen}
-          >
+          <Button colorScheme='transparent' color='black' onClick={onOpen}>
             <HiBars3CenterLeft />
           </Button>
           {isLoad ? <div className='greenCircle'></div> : ""}
@@ -46,7 +41,7 @@ const Navbar = ({ isLoad }: { isLoad: boolean }) => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerHeader borderBottomWidth='1px' fontSize='2.5rem'>
-              Menú
+              Menu
             </DrawerHeader>
             <DrawerBody>
               <Accordion

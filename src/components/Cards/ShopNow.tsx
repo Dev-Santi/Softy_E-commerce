@@ -6,14 +6,14 @@ const ShopNow = ({ price }: { price: string | number }) => {
   return (
     <Flex justifyContent='space-between' maxWidth='12rem' alignItems='center'>
       <Box margin='3rem 0' borderLeftWidth='1px' pl='1.5rem' borderColor='gray'>
-        <Heading color='#ff5371dd' as='h2' fontSize='1.2rem'>
+        <Heading color='#ff5371dd' as='h2' fontSize='1.2rem' fontWeight='400'>
           Start From
         </Heading>
         <Box
-          m='1rem 0'
+          m='1.4rem 0'
           as='span'
           display='block'
-          fontSize='2.5rem'
+          fontSize='2.8rem'
           fontWeight='900'
         >
           ${price}
